@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Personnel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></canvas>
+    <header style="position: relative; z-index: 100;">
+        <nav>
+            <div class="logo">Mon Portfolio</div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
+                    <li><a href="#" onclick="showSection('parcours')">Parcours</a></li>
+                    <li><a href="#" onclick="showSection('competences')">Compétences</a></li>
+                    <li><a href="#" onclick="showSection('experiences')">Certifications</a></li>
+                    <li><a href="#" onclick="showSection('matieres')">Matières</a></li>
+                    <li><a href="#" onclick="showSection('passions')">Passions</a></li>
+                    <li><a href="#" onclick="showSection('quiz')">Quiz</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="#" onclick="showSection('temoignage')">Témoignage</a></li>
+                </ul>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" style="position: relative; z-index: 100;">
+        <!-- Section Accueil -->
+        <section id="accueil" class="active">
+            <div class="hero">
+                <img src="images/photo_linkedin.jpg" alt="Photo de profil">
+                <h1>Abdelwaheb BEN HAJ SAID</h1>
+                <h2>Ingénierie Informatique | Big Data </h2>
+                <p style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 1rem auto;">
+                    Titulaire d’une licence en Big Data et actuellement en formation d’ingénierie en génie informatique, je suis passionné par le développement web et mobile, la data et l’intelligence artificielle. Je dispose de solides bases en IA, Agentic AI et modèles de langage (LLM), appliquées à la conception d’applications web et mobiles intégrant l’analyse de données et des architectures modernes. Mon objectif est de développer des solutions performantes, fiables et centrées sur l’utilisateur, répondant aux exigences professionnelles.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/abdelwaheb-ben-haj-said-ab9318273/" target="_blank" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.5v8.5h2.5v-4.34c0-.77.62-1.4 1.4-1.4.77 0 1.4.63 1.4 1.4v4.34h2.5M7 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Abdelwaheb-bhs" target="_blank" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Parcours Académique -->
+        <section id="parcours">
+            <h2>Parcours Académique</h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <h3>Ingénieur en Informatique</h3>
+                    <p><strong>2025 - en cours</strong></p>
+                    <p>INSTITUT INTRNATIONAL DE TECHNOLOGIE (IIT) - Sfax</p>
+                </article>
+                <article class="timeline-item">
+                    <h3>Licence en Science Informatique</h3>
+                    <p><strong>2022 - 2025</strong></p>
+                    <p>Institut Supérieur d'Informatique et de Multimédia de Sfax (ISIMS)</p>
+                    <p>Spécialisation en big data et analyse de données</p>
+                </article>
+                <article class="timeline-item">
+                    <h3>Baccalauréat en Mathématiques </h3>
+                    <p><strong>2022</strong></p>
+                    <p>Mention Assez Bien</p>
+                </article>
+            
+            </div>
+            
+            <h2>Stages </h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <h3>Stagiaire Développeur IA (Projet de fin d’études)</h3>
+                    <p><strong> 02/2025– 05/2025</strong></p>
+                    <p><em>Nvotec, Paris, France (Télétravail)</em></p>
+                    <ul style="margin-top: 1rem; margin-left: 1.5rem;">
+                        <li>Conception et implémentation d'un système robuste RAG avec pipeline d'ingestion de documents (extraction PDF, Excel, Word nettoyage, segmentation et vectorisation).</li>
+                        <li>Conception d'algorithmes de web scraping pour traiter les données de sites web, y compris ceux nécessitant une authentification.</li>
+                        <li>Développement d'un pipeline de requêtes permettant un questionnement contextuel et précis via un routage et une reformulation intelligents.</li>
+                        <li>Intégration de Qdrant avec SQL Server Express pour assurer un stockage synchronisé et un support complet des opérations CRUD.</li>
+                        <li>Création d'une interface frontend basée sur Nuxt.js permettant aux utilisateurs de téléverser, gérer leurs documents et interagir avec un assistant intelligent.</li>
+                        <li>Déploiement de LLMs via des backends d'inférence évolutifs (TGI, vLLM et llama.cpp) avec Docker et Runpod.</li>
+                    </ul>
+                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage3', 'Stagiaire Développeur IA', 'Screenshot 2026-01-19 150551.png')">📄 Attestation</button>
+                </article>
+                <article class="timeline-item">
+                    <h3>Stagiaire Développeur Logiciel (Été)</h3>
+                    <p><strong>06/2024– 08/2024</strong></p>
+                    <p><em>Nvotec, Paris, France (Télétravail)</em></p>
+                    <ul style="margin-top: 1rem; margin-left: 1.5rem;">
+                        <li>Développement d'un plateform pour E-citoyen en utilisant Nuxt.js, pinia et Tailwind CSS, améliorant l'UI/UX et la réactivité.</li>
+                        <li>Correction de bogues et ajout de nouvelles fonctionnalités, augmentant la performance de la plateforme.</li>
+                    </ul>
+                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage4', 'Stagiaire Développeur Logiciel', 'Screenshot 2026-01-19 150821.png')">📄 Attestation</button>
+                </article>
+                <article class="timeline-item">
+                    <h3>Stagiaire Gestionnaire Technique – Analyse de Données Locomotives</h3>
+                    <p><strong>06/2023</strong></p>
+                    <p><em>Societe Nationale des Chemins de Fer Tunisiens (SNCFT)</em></p>
+                    <ul style="margin-top: 1rem; margin-left: 1.5rem;">
+                        <li>Participation à la gestion technique des locomotives et au suivi de leur état de fonctionnement à l'aide des données issues du système de contrôle EMD EM2000™.</li>
+                        <li>Collecte, organisation et analyse des données opérationnelles (performances moteur, traction, consommation, événements et défauts) pour appuyer la prise de décision technique.</li>
+                        <li>Contribution à la surveillance des indicateurs de performance et à l'identification des anomalies récurrentes.</li>
+                        <li>Appui à la planification de la maintenance préventive grâce à l'exploitation des historiques de données et des rapports techniques.</li>
+                    </ul>
+                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage1', 'Stage de Développement Web', 'Screenshot 2026-01-19 150618.png')">📄 Attestation</button>
+                </article>
+            </div>
+            <h2>Hackathon </h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <h3>Hackathon de 24h - chaussure Eco-responsable</h3>
+                    <p><strong>2024</strong></p>
+                    
+                    <p>Application e-commerce mobile développée avec Flutter, dédiée à la vente de chaussures. Elle permet aux utilisateurs de parcourir les produits, consulter les détails (prix, tailles, images), ajouter des articles au panier, passer commande et suivre leurs achats à travers une interface simple, rapide et intuitive.</p>
+                    <div style="margin-top: 5px; display:flex; gap:0.5rem; align-items:center;">
+                        <a href="https://github.com/Abdelwaheb-bhs/ShoesApp" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>
+                        <button style="margin-top: 0;" class="certificate-link" onclick="openCertificateModal('Hackathon1', 'chaussure Eco-responsable', 'Screenshot 2026-01-19 150533.png')">📄 Attestation</button>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <h3>MedHack 2</h3>
+                    <p><strong>2023</strong></p>
+                    <p><em>Lung Cancer Prediction APP</em></p>
+                    <p>Une application qui vous permet d’effectuer une analyse précise des échantillons et de confirmer l’étendue
+de leur infection par cette maladie, car cette application vous fournit une présentation illustrative de ces
+échantillons en téléchargeant leur fichier et en affichant des graphiques spécifiques pour chaque analyse. Basée
+sur Python Flet</p>
+                    <div style="margin-top: 5px; display:flex; gap:0.5rem; align-items:center;">
+                        <a href="https://github.com/Abdelwaheb-bhs/Lung-Cancer-Predact" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>
+                        <button style="margin-top: 0;" class="certificate-link" onclick="openCertificateModal('Hackathon2', 'MedHack 2', 'Screenshot 2026-01-19 150511.png')">📄 Attestation</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="competences">
+            <h2>Compétences Informatiques</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Langages de Programmation</h3>
+                    <p>JavaScript, Python, Java, C++, PHP, HTML/CSS</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Frameworks & Bibliothèques</h3>
+                    <p>React, Node.js, Express, Django, Bootstrap, Tailwind CSS</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Bases de Données</h3>
+                    <p>MySQL, PostgreSQL, MongoDB, Oracle</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Outils de Développement</h3>
+                    <p>Git, VS Code, IntelliJ IDEA, Docker, Postman</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Méthodes Agiles</h3>
+                    <p>Scrum, Kanban, Sprints, Daily Stand-ups</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Autres Compétences</h3>
+                    <p>UI/UX Design, API REST, DevOps, Cloud Computing</p>
+                </article>
+            </div>
+
+            <!-- Projects Container -->
+            <div class="projects-section">
+                <h3>Mes Projets</h3>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/Capture1.PNG" alt="Nchatiw Chat Application">
+                        </div>
+                        <div class="project-content">
+                            <h4>Nchatiw</h4>
+                            <p>Une application de chat simple, permettant la communication
+basée sur le texte entre les utilisateurs. Basée sur Flutter pour
+le frontend et Firebase pour le backend</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">📖 Source Code</a>
+                                 <a href="https://github.com/Abdelwaheb-bhs/Nchatiw-flutter-chat-app" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/Capture.PNG" alt="Sorting Hat Quiz Application">
+                        </div>
+                        <div class="project-content">
+                            <h4>Sorting Hat</h4>
+                            <p>Application de quiz interactif permettant aux utilisateurs de découvrir la maison de Poudlard qui leur correspond à travers une expérience ludique inspirée de l’univers Harry Potter.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">📖 Source Code</a>
+                                 <a href="https://github.com/Abdelwaheb-bhs/Sorting-Hat-flutter-app" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/Capture d'écran 2024-12-30 221032.png" alt="Your Project">
+                        </div>
+                        <div class="project-content">
+                            <h4>App mobile pour cabinet médical</h4>
+                            <p> Développement d’une application de gestion pour cabinet médical permettant le suivi des patients, la gestion
+des rendez-vous (Flutter Laravel).</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">📖 Source Code</a>
+ <a href="https://github.com/Abdelwaheb-bhs/MediFollow" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>                            </div>
+                        </div>
+                    </article>
+ <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/Gemini_Generated_Image_fgnb9lfgnb9lfgnb.png" alt="Your Project">
+                        </div>
+                        <div class="project-content">
+                            <h4>AI Agent powerd by RAG with Advanced Output</h4>
+                            <p> Application web basée sur la Retrieval-Augmented Generation (RAG) permettant d’interroger intelligemment des données structurées et non structurées, avec des résultats présentés sous forme de graphiques avancés et interactifs pour faciliter l’analyse et la prise de décision.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">📖 Source Code</a>
+ <a href="https://github.com/Abdelwaheb-bhs/SK-RAG" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>                            </div>
+                        </div>
+                    </article>
+                      <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/Gemini_Generated_Image_yqzezdyqzezdyqze.png" alt="Your Project">
+                        </div>
+                        <div class="project-content">
+                            <h4>Smart Entreprise</h4>
+                            <p> Application mobile utilisant l’IA et la reconnaissance faciale pour contrôler l’ouverture des portes via smartphone et assurer automatiquement la gestion des présences à l’aide d’un modèle IA connecté à des caméras et à un système de contrôle d’accès.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">📖 Source Code</a>
+ <a href="https://github.com/Abdelwaheb-bhs/SmartRoom" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>                            </div>
+                        </div>
+                    </article>
+                     <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/lang.png" alt="Your Project">
+                        </div>
+                        <div class="project-content">
+                            <h4>Lung Cancer Prediction APP</h4>
+                            <p>Application basée sur Python Flet permettant l’analyse précise d’échantillons, avec visualisation des résultats et affichage de graphiques spécifiques à partir des fichiers téléchargés.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">📖 Source Code</a>
+ <a href="https://github.com/Abdelwaheb-bhs/Lung-Cancer-Predact" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Expériences -->
+        <section id="experiences">
+            <h2>Certifications</h2>
+
+            <!-- Certifications Container -->
+            <div class="certifications-section">
+                
+                <div class="certifications-grid">
+                    <article class="certification-card">
+                        <div class="certification-image">
+                            <img src="images/Screenshot 2026-01-18 202532.png" alt="React Certification">
+                        </div>
+                        <div class="certification-info">
+                            <h4>Generative AI with Diffusion Models</h4>
+                            <p class="certification-issuer">NVIDIA</p>
+                            <a href="https://learn.nvidia.com/certificates?id=AXZTjvCrTcyGCbG0EuX4Gw#" class="certification-link">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <article class="certification-card">
+                        <div class="certification-image">
+                            <img src="images/Screenshot 2026-01-18 202613.png" alt="JavaScript Certification">
+                        </div>
+                        <div class="certification-info">
+                            <h4>
+Introduction to Transformer-Based Natural Language Processing</h4>
+                            <p class="certification-issuer">NVIDIA</p>
+                            <a href="https://learn.nvidia.com/certificates?id=PluwakLsR1K0CWMDA6O-ew" class="certification-link">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <article class="certification-card">
+                        <div class="certification-image">
+                            <img src="images/Screenshot 2026-01-18 202634.png" alt="Web Development Certification">
+                        </div>
+                        <div class="certification-info">
+                            <h4>Getting Started with Deep Learning</h4>
+                            <p class="certification-issuer">NVIDIA</p>
+                            <a href="https://learn.nvidia.com/certificates?id=iAtc-GL7Ti-1jjzhamytaQ#/courses/course?course_id=course-v1:DLI+S-FX-01+V1" class="certification-link">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <article class="certification-card">
+                        <div class="certification-image">
+                            <img src="images/Screenshot 2026-01-18 202554.png" alt="Python Certification">
+                        </div>
+                        <div class="certification-info">
+                            <h4>Generative AI with Large Language Models</h4>
+                            <p class="certification-issuer">Deeplearning.ai</p>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/6ZISEIENCHPF" class="certification-link">View Certificate</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Manifestations -->
+        <section id="manifestations">
+            <h2>Manifestations & Événements</h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <h3>Hackathon National de Programmation</h3>
+                    <p><strong>Novembre 2025</strong></p>
+                    <p>Participation avec mon équipe au développement d'une solution innovante pour la gestion intelligente de l'énergie.</p>
+                </article>
+                <article class="timeline-item">
+                    <h3>Formation en Intelligence Artificielle</h3>
+                    <p><strong>Mars 2025</strong></p>
+                    <p>Formation intensive de 3 jours sur le Machine Learning et les réseaux de neurones.</p>
+                </article>
+                <article class="timeline-item">
+                    <h3>Conférence DevFest Tunisie</h3>
+                    <p><strong>Décembre 2024</strong></p>
+                    <p>Participation à la conférence annuelle des développeurs avec des workshops sur les nouvelles technologies.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section Matières -->
+        <section id="matieres">
+            <h2>Matières & Projets Réalisés</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Programmation Web I</h3>
+                    <p><strong>Projet:</strong> Site web personnel avec HTML, CSS et JavaScript</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Algorithmes & Structures de Données</h3>
+                    <p><strong>Projet:</strong> Implémentation d'algorithmes de tri et de recherche</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Bases de Données</h3>
+                    <p><strong>Projet:</strong> Système de gestion de bibliothèque avec MySQL</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Programmation Orientée Objet</h3>
+                    <p><strong>Projet:</strong> Application de gestion de stock en Java</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Systèmes d'Exploitation</h3>
+                    <p><strong>TP:</strong> Scripts shell et gestion de processus</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Réseaux Informatiques</h3>
+                    <p><strong>TP:</strong> Configuration de réseaux et protocoles TCP/IP</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section Passions -->
+        <section id="passions">
+            <h2>Passions & Centres d'Intérêt</h2>
+            <article style="margin-bottom: 2rem;">
+                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Développement de Projets Personnels</h3>
+                <p>Passionné par la création d'applications web innovantes et l'apprentissage de nouvelles technologies. J'aime explorer les dernières tendances en développement et contribuer à des projets open source.</p>
+            </article>
+            <article style="margin-bottom: 2rem;">
+                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Esprit Artistique</h3>
+                <p>Passionné par l'art et la créativité, je cultive un esprit artistique qui enrichit ma vision du design et de l'innovation. Mes dessins et créations visuelles reflètent ma sensibilité créative et ma capacité à transformer des idées abstraites en réalités visuelles.</p>
+                <div class="drawings-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div class="drawing-card" onclick="openDrawingModal('images/Screenshot 2026-01-19 204219.png', 'Dessin 1')">
+                        <div style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center;">
+                            <img src="images/Screenshot 2026-01-19 204219.png" alt="Dessin 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="drawing-card" onclick="openDrawingModal('images/Screenshot 2026-01-19 204230.png', 'Dessin 2')">
+                        <div style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center;">
+                            <img src="images/Screenshot 2026-01-19 204230.png" alt="Dessin 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="drawing-card" onclick="openDrawingModal('images/Screenshot 2026-01-19 204241.png', 'Dessin 3')">
+                        <div style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center;">
+                            <img src="images/Screenshot 2026-01-19 204241.png" alt="Dessin 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article style="margin-bottom: 2rem;">
+                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Qualités Personnelles</h3>
+                <p>Travail d'équipe, persévérance, curiosité intellectuelle, gestion du temps, capacité d'adaptation, esprit analytique et créativité dans la résolution de problèmes.</p>
+            </article>
+        </section>
+
+        <!-- Section Quiz -->
+        <section id="quiz">
+            <h2>Quiz Programmation Web</h2>
+            <div class="quiz-container">
+                <form id="quizForm">
+                    <article class="question">
+                        <h3>1. Que signifie HTML ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="a"> Hyperlinks and Text Markup Language</label>
+                            <label><input type="radio" name="q1" value="b"> HyperText Markup Language</label>
+                            <label><input type="radio" name="q1" value="c"> Home Tool Markup Language</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>2. Quelle balise est utilisée pour créer un lien hypertexte ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="a"> &lt;link&gt;</label>
+                            <label><input type="radio" name="q2" value="b"> &lt;a&gt;</label>
+                            <label><input type="radio" name="q2" value="c"> &lt;href&gt;</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>3. CSS signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="a"> Creative Style Sheets</label>
+                            <label><input type="radio" name="q3" value="b"> Cascading Style Sheets</label>
+                            <label><input type="radio" name="q3" value="c"> Computer Style Sheets</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>4. Quelle propriété CSS change la couleur du texte ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="a"> text-color</label>
+                            <label><input type="radio" name="q4" value="b"> font-color</label>
+                            <label><input type="radio" name="q4" value="c"> color</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>5. Comment déclarer une variable en JavaScript ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="a"> var nom;</label>
+                            <label><input type="radio" name="q5" value="b"> variable nom;</label>
+                            <label><input type="radio" name="q5" value="c"> v nom;</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>6. Quelle méthode JavaScript affiche une alerte ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q6" value="a"> msg()</label>
+                            <label><input type="radio" name="q6" value="b"> alert()</label>
+                            <label><input type="radio" name="q6" value="c"> message()</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>7. Quelle balise HTML définit un en-tête de niveau 1 ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q7" value="a"> &lt;header&gt;</label>
+                            <label><input type="radio" name="q7" value="b"> &lt;h1&gt;</label>
+                            <label><input type="radio" name="q7" value="c"> &lt;heading&gt;</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>8. Comment créer une fonction en JavaScript ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q8" value="a"> function maFonction()</label>
+                            <label><input type="radio" name="q8" value="b"> def maFonction()</label>
+                            <label><input type="radio" name="q8" value="c"> func maFonction()</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>9. Quelle balise crée une liste non ordonnée ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q9" value="a"> &lt;ol&gt;</label>
+                            <label><input type="radio" name="q9" value="b"> &lt;ul&gt;</label>
+                            <label><input type="radio" name="q9" value="c"> &lt;list&gt;</label>
+                        </div>
+                    </article>
+
+                    <article class="question">
+                        <h3>10. Comment lier un fichier CSS externe ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q10" value="a"> &lt;link rel="stylesheet" href="style.css"&gt;</label>
+                            <label><input type="radio" name="q10" value="b"> &lt;style src="style.css"&gt;</label>
+                            <label><input type="radio" name="q10" value="c"> &lt;css href="style.css"&gt;</label>
+                        </div>
+                    </article>
+
+                    <button type="button" onclick="checkQuiz()">Valider le Quiz</button>
+                </form>
+
+                <div id="result" class="result"></div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <form id="contactForm" onsubmit="handleContact(event)">
+                <div class="form-group">
+                    <label for="name">Nom complet *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Envoyer le message</button>
+            </form>
+        </section>
+
+        <!-- Section Témoignage -->
+        <section id="temoignage">
+            <h2>Témoignage sur l'IIT</h2>
+            <article style="background: var(--bg-secondary); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--primary); color: var(--text-primary);">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem; color: var(--text-primary);">
+                    Mon expérience à l'Institut des Technologies de l'Information et de la Communication a été extrêmement enrichissante. Les enseignants sont compétents et passionnés, toujours disponibles pour nous accompagner dans notre apprentissage.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem; color: var(--text-primary);">
+                    Les infrastructures modernes et les équipements de pointe nous permettent de pratiquer dans des conditions optimales. Les projets pratiques et les stages nous préparent efficacement au monde professionnel.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-primary);">
+                    Je recommande vivement l'IIT à tous ceux qui souhaitent poursuivre une carrière dans l'informatique et les technologies de l'information. C'est un établissement qui forme des professionnels compétents et prêts à relever les défis du marché du travail.
+                </p>
+                <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary);">
+                    Note : 5/5 ⭐⭐⭐⭐⭐
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer style="position: relative; z-index: 100;">
+        <p>&copy; 2026 Mon Portfolio Personnel. Tous droits réservés.</p>
+        <p>Réalisé dans le cadre du cours de Programmation Web I</p>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="certificateTitle">Attestation</h2>
+                <button class="close-modal" onclick="closeCertificateModal()">&times;</button>
+            </div>
+            <div id="certificateBody">
+                <!-- Certificate content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Drawing Modal -->
+    <div id="drawingModal" class="modal">
+        <div class="modal-content" style="max-width: 90%; max-height: 90%;">
+            <div class="modal-header">
+                <h2 id="drawingTitle">Dessin</h2>
+                <button class="close-modal" onclick="closeDrawingModal()">&times;</button>
+            </div>
+            <div id="drawingBody" style="display: flex; justify-content: center; align-items: center; padding: 2rem;">
+                <img id="drawingImage" src="" alt="Drawing" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const connections = [];
+        const particleCount = 80;
+        const maxDistance = 150;
+        const mouse = { x: null, y: null, radius: 150 };
+
+        // Theme-aware colors
+        function getThemeColors() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            return {
+                bg: isDark ? 'rgba(15, 23, 42, 0.08)' : 'rgba(248, 250, 252, 0.05)',
+                particleLight: isDark ? 'rgba(59, 130, 246, ' : 'rgba(139, 92, 246, ',
+                particleShadow: isDark ? 'rgba(59, 130, 246, ' : 'rgba(139, 92, 246, ',
+                connection: isDark ? 'rgba(148, 163, 253, ' : 'rgba(196, 181, 253, '
+            };
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.z = Math.random() * 1000;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.vz = (Math.random() - 0.5) * 2;
+                this.size = 2;
+                this.baseSize = 2;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.z += this.vz;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+                if (this.z < 0 || this.z > 1000) this.vz *= -1;
+
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < mouse.radius) {
+                        const force = (mouse.radius - dist) / mouse.radius;
+                        this.x -= dx * force * 0.05;
+                        this.y -= dy * force * 0.05;
+                        this.size = this.baseSize + force * 3;
+                    } else {
+                        this.size = this.baseSize;
+                    }
+                }
+
+                const scale = 500 / (500 + this.z);
+                this.size = this.baseSize * scale;
+            }
+
+            draw() {
+                const scale = 500 / (500 + this.z);
+                const x2d = (this.x - canvas.width / 2) * scale + canvas.width / 2;
+                const y2d = (this.y - canvas.height / 2) * scale + canvas.height / 2;
+                const opacity = 1 - this.z / 1000;
+                const colors = getThemeColors();
+
+                ctx.beginPath();
+                ctx.arc(x2d, y2d, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = colors.particleLight + (opacity * 0.8) + ')';
+                ctx.fill();
+
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = colors.particleShadow + (opacity * 0.5) + ')';
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function drawConnections() {
+            const colors = getThemeColors();
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < maxDistance) {
+                        const scale1 = 500 / (500 + particles[i].z);
+                        const scale2 = 500 / (500 + particles[j].z);
+                        
+                        const x1 = (particles[i].x - canvas.width / 2) * scale1 + canvas.width / 2;
+                        const y1 = (particles[i].y - canvas.height / 2) * scale1 + canvas.height / 2;
+                        const x2 = (particles[j].x - canvas.width / 2) * scale2 + canvas.width / 2;
+                        const y2 = (particles[j].y - canvas.height / 2) * scale2 + canvas.height / 2;
+
+                        const opacity = (1 - dist / maxDistance) * 0.3;
+
+                        ctx.beginPath();
+                        ctx.moveTo(x1, y1);
+                        ctx.lineTo(x2, y2);
+                        ctx.strokeStyle = colors.connection + opacity + ')';
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            const colors = getThemeColors();
+            ctx.fillStyle = colors.bg;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            drawConnections();
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+
+        window.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        // Update particles when theme changes
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('theme-toggle')) {
+                setTimeout(() => {
+                    particles.forEach(p => p.size = p.baseSize);
+                }, 10);
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
