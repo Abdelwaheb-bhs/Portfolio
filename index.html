@@ -17,11 +17,8 @@
                     <li><a href="#" onclick="showSection('parcours')">Parcours</a></li>
                     <li><a href="#" onclick="showSection('competences')">Compétences</a></li>
                     <li><a href="#" onclick="showSection('experiences')">Certifications</a></li>
-                    <li><a href="#" onclick="showSection('matieres')">Matières</a></li>
                     <li><a href="#" onclick="showSection('passions')">Passions</a></li>
-                    <li><a href="#" onclick="showSection('quiz')">Quiz</a></li>
                     <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-                    <li><a href="#" onclick="showSection('temoignage')">Témoignage</a></li>
                 </ul>
                 <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
             </div>
@@ -354,36 +351,7 @@ Introduction to Transformer-Based Natural Language Processing</h4>
             </div>
         </section>
 
-        <!-- Section Matières -->
-        <section id="matieres">
-            <h2>Matières & Projets Réalisés</h2>
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <h3>Programmation Web I</h3>
-                    <p><strong>Projet:</strong> Site web personnel avec HTML, CSS et JavaScript</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Algorithmes & Structures de Données</h3>
-                    <p><strong>Projet:</strong> Implémentation d'algorithmes de tri et de recherche</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Bases de Données</h3>
-                    <p><strong>Projet:</strong> Système de gestion de bibliothèque avec MySQL</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Programmation Orientée Objet</h3>
-                    <p><strong>Projet:</strong> Application de gestion de stock en Java</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Systèmes d'Exploitation</h3>
-                    <p><strong>TP:</strong> Scripts shell et gestion de processus</p>
-                </article>
-                <article class="skill-card">
-                    <h3>Réseaux Informatiques</h3>
-                    <p><strong>TP:</strong> Configuration de réseaux et protocoles TCP/IP</p>
-                </article>
-            </div>
-        </section>
+        <!-- Section Matières removed -->
 
         <!-- Section Passions -->
         <section id="passions">
@@ -419,107 +387,7 @@ Introduction to Transformer-Based Natural Language Processing</h4>
             </article>
         </section>
 
-        <!-- Section Quiz -->
-        <section id="quiz">
-            <h2>Quiz Programmation Web</h2>
-            <div class="quiz-container">
-                <form id="quizForm">
-                    <article class="question">
-                        <h3>1. Que signifie HTML ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q1" value="a"> Hyperlinks and Text Markup Language</label>
-                            <label><input type="radio" name="q1" value="b"> HyperText Markup Language</label>
-                            <label><input type="radio" name="q1" value="c"> Home Tool Markup Language</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>2. Quelle balise est utilisée pour créer un lien hypertexte ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q2" value="a"> &lt;link&gt;</label>
-                            <label><input type="radio" name="q2" value="b"> &lt;a&gt;</label>
-                            <label><input type="radio" name="q2" value="c"> &lt;href&gt;</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>3. CSS signifie :</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q3" value="a"> Creative Style Sheets</label>
-                            <label><input type="radio" name="q3" value="b"> Cascading Style Sheets</label>
-                            <label><input type="radio" name="q3" value="c"> Computer Style Sheets</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>4. Quelle propriété CSS change la couleur du texte ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q4" value="a"> text-color</label>
-                            <label><input type="radio" name="q4" value="b"> font-color</label>
-                            <label><input type="radio" name="q4" value="c"> color</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>5. Comment déclarer une variable en JavaScript ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q5" value="a"> var nom;</label>
-                            <label><input type="radio" name="q5" value="b"> variable nom;</label>
-                            <label><input type="radio" name="q5" value="c"> v nom;</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>6. Quelle méthode JavaScript affiche une alerte ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q6" value="a"> msg()</label>
-                            <label><input type="radio" name="q6" value="b"> alert()</label>
-                            <label><input type="radio" name="q6" value="c"> message()</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>7. Quelle balise HTML définit un en-tête de niveau 1 ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q7" value="a"> &lt;header&gt;</label>
-                            <label><input type="radio" name="q7" value="b"> &lt;h1&gt;</label>
-                            <label><input type="radio" name="q7" value="c"> &lt;heading&gt;</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>8. Comment créer une fonction en JavaScript ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q8" value="a"> function maFonction()</label>
-                            <label><input type="radio" name="q8" value="b"> def maFonction()</label>
-                            <label><input type="radio" name="q8" value="c"> func maFonction()</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>9. Quelle balise crée une liste non ordonnée ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q9" value="a"> &lt;ol&gt;</label>
-                            <label><input type="radio" name="q9" value="b"> &lt;ul&gt;</label>
-                            <label><input type="radio" name="q9" value="c"> &lt;list&gt;</label>
-                        </div>
-                    </article>
-
-                    <article class="question">
-                        <h3>10. Comment lier un fichier CSS externe ?</h3>
-                        <div class="options">
-                            <label><input type="radio" name="q10" value="a"> &lt;link rel="stylesheet" href="style.css"&gt;</label>
-                            <label><input type="radio" name="q10" value="b"> &lt;style src="style.css"&gt;</label>
-                            <label><input type="radio" name="q10" value="c"> &lt;css href="style.css"&gt;</label>
-                        </div>
-                    </article>
-
-                    <button type="button" onclick="checkQuiz()">Valider le Quiz</button>
-                </form>
-
-                <div id="result" class="result"></div>
-            </div>
-        </section>
+        <!-- Section Quiz removed -->
 
         <!-- Section Contact -->
         <section id="contact">
@@ -545,29 +413,12 @@ Introduction to Transformer-Based Natural Language Processing</h4>
             </form>
         </section>
 
-        <!-- Section Témoignage -->
-        <section id="temoignage">
-            <h2>Témoignage sur l'IIT</h2>
-            <article style="background: var(--bg-secondary); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--primary); color: var(--text-primary);">
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem; color: var(--text-primary);">
-                    Mon expérience à l'Institut des Technologies de l'Information et de la Communication a été extrêmement enrichissante. Les enseignants sont compétents et passionnés, toujours disponibles pour nous accompagner dans notre apprentissage.
-                </p>
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem; color: var(--text-primary);">
-                    Les infrastructures modernes et les équipements de pointe nous permettent de pratiquer dans des conditions optimales. Les projets pratiques et les stages nous préparent efficacement au monde professionnel.
-                </p>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-primary);">
-                    Je recommande vivement l'IIT à tous ceux qui souhaitent poursuivre une carrière dans l'informatique et les technologies de l'information. C'est un établissement qui forme des professionnels compétents et prêts à relever les défis du marché du travail.
-                </p>
-                <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary);">
-                    Note : 5/5 ⭐⭐⭐⭐⭐
-                </p>
-            </article>
-        </section>
+        <!-- Section Témoignage removed -->
     </main>
 
     <footer style="position: relative; z-index: 100;">
-        <p>&copy; 2026 Mon Portfolio Personnel. Tous droits réservés.</p>
-        <p>Réalisé dans le cadre du cours de Programmation Web I</p>
+        <p>&copy; 2026 Abdelwaheb Ben Haj Said. Tous droits réservés.</p>
+        <p>Conception et développement : Abdelwaheb Ben Haj Said</p>
     </footer>
 
     <!-- Certificate Modal -->
