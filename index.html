@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Personnel</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style-to-use.css">
 </head>
 <body>
     <canvas id="canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></canvas>
     <header style="position: relative; z-index: 100;">
         <nav>
-            <div class="logo">Mon Portfolio</div>
+            <div class="logo"><img src="images/mygif.gif" alt="Logo" class="logo-gif"> Abdelwaheb <span style="color:var(--nv-blue);font-weight:800;">-BHS</span></div>
             <div class="nav-right">
                 <ul>
-                    <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
-                    <li><a href="#" onclick="showSection('parcours')">Parcours</a></li>
-                    <li><a href="#" onclick="showSection('competences')">Compétences</a></li>
-                    <li><a href="#" onclick="showSection('experiences')">Certifications</a></li>
-                    <li><a href="#" onclick="showSection('passions')">Passions</a></li>
-                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="#accueil" onclick="return showSection('accueil')" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="#parcours" onclick="return showSection('parcours')" data-i18n="nav.path">Parcours</a></li>
+                    <li><a href="#competences" onclick="return showSection('competences')" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="#experiences" onclick="return showSection('experiences')" data-i18n="nav.certifs">Certifications</a></li>
+                    <li><a href="#passions" onclick="return showSection('passions')" data-i18n="nav.passions">Passions</a></li>
+                    <li><a href="#contact" onclick="return showSection('contact')" data-i18n="nav.contact">Contact</a></li>
                 </ul>
+                <button class="lang-toggle" onclick="toggleLanguage()" title="Switch language">FR</button>
                 <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
             </div>
         </nav>
@@ -29,11 +31,14 @@
         <!-- Section Accueil -->
         <section id="accueil" class="active">
             <div class="hero">
-                <img src="images/photo_linkedin.jpg" alt="Photo de profil">
+                <div class="profile-ring">
+                    <canvas class="profile-neurons" width="680" height="320"></canvas>
+<img src="images/photo_linkedin.jpg" alt="Photo de profil">
+                </div>
                 <h1>Abdelwaheb BEN HAJ SAID</h1>
-                <h2>Ingénierie Informatique | Big Data </h2>
-                <p style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 1rem auto;">
-                    Titulaire d’une licence en Big Data et actuellement en formation d’ingénierie en génie informatique, je suis passionné par le développement web et mobile, la data et l’intelligence artificielle. Je dispose de solides bases en IA, Agentic AI et modèles de langage (LLM), appliquées à la conception d’applications web et mobiles intégrant l’analyse de données et des architectures modernes. Mon objectif est de développer des solutions performantes, fiables et centrées sur l’utilisateur, répondant aux exigences professionnelles.
+                <h2 data-i18n="hero.subtitle">Ingénierie Informatique | Big Data </h2>
+                <p data-i18n="hero.intro" style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 1rem auto;">
+                    Titulaire d'une licence en Big Data et actuellement en formation d'ingénierie en génie informatique, je suis passionné par le développement web et mobile, la data et l'intelligence artificielle. Je dispose de solides bases en IA, Agentic AI et modèles de langage (LLM), appliquées à la conception d'applications web et mobiles intégrant l'analyse de données et des architectures modernes. Mon objectif est de développer des solutions performantes, fiables et centrées sur l'utilisateur, répondant aux exigences professionnelles.
                 </p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/abdelwaheb-ben-haj-said-ab9318273/" target="_blank" title="LinkedIn">
@@ -50,87 +55,87 @@
             </div>
         </section>
 
-        <!-- Section Parcours Académique -->
+<!-- Section Parcours Académique -->
         <section id="parcours">
-            <h2>Parcours Académique</h2>
+            <h2 data-i18n="edu.title">Parcours Académique</h2>
             <div class="timeline">
                 <article class="timeline-item">
-                    <h3>Ingénieur en Informatique</h3>
-                    <p><strong>2025 - en cours</strong></p>
+                    <h3 data-i18n="edu.eng.title">Ingénieur en Informatique</h3>
+                    <p><strong>2025 - <span data-i18n="edu.eng.status">en cours</span></strong></p>
                     <p>INSTITUT INTRNATIONAL DE TECHNOLOGIE (IIT) - Sfax</p>
                 </article>
                 <article class="timeline-item">
-                    <h3>Licence en Science Informatique</h3>
+                    <h3 data-i18n="edu.licence.title">Licence en Science Informatique</h3>
                     <p><strong>2022 - 2025</strong></p>
                     <p>Institut Supérieur d'Informatique et de Multimédia de Sfax (ISIMS)</p>
-                    <p>Spécialisation en big data et analyse de données</p>
+                    <p data-i18n="edu.licence.desc">Spécialisation en big data et analyse de données</p>
                 </article>
                 <article class="timeline-item">
-                    <h3>Baccalauréat en Mathématiques </h3>
+                    <h3 data-i18n="edu.bac.title">Baccalauréat en Mathématiques </h3>
                     <p><strong>2022</strong></p>
-                    <p>Mention Assez Bien</p>
+                    <p data-i18n="edu.bac.mention">Mention Assez Bien</p>
                 </article>
             
             </div>
             
-            <h2>Stages </h2>
+            <h2 data-i18n="stages.title">Stages </h2>
             <div class="timeline">
                 <article class="timeline-item">
-                    <h3>Stagiaire Développeur IA (Projet de fin d’études)</h3>
+                    <h3 data-i18n="stages.ia.title">Stagiaire Développeur IA (Projet de fin d'études)</h3>
                     <p><strong> 02/2025– 05/2025</strong></p>
                     <p><em>Nvotec, Paris, France (Télétravail)</em></p>
                     <ul style="margin-top: 1rem; margin-left: 1.5rem;">
-                        <li>Conception et implémentation d'un système robuste RAG avec pipeline d'ingestion de documents (extraction PDF, Excel, Word nettoyage, segmentation et vectorisation).</li>
-                        <li>Conception d'algorithmes de web scraping pour traiter les données de sites web, y compris ceux nécessitant une authentification.</li>
-                        <li>Développement d'un pipeline de requêtes permettant un questionnement contextuel et précis via un routage et une reformulation intelligents.</li>
-                        <li>Intégration de Qdrant avec SQL Server Express pour assurer un stockage synchronisé et un support complet des opérations CRUD.</li>
-                        <li>Création d'une interface frontend basée sur Nuxt.js permettant aux utilisateurs de téléverser, gérer leurs documents et interagir avec un assistant intelligent.</li>
-                        <li>Déploiement de LLMs via des backends d'inférence évolutifs (TGI, vLLM et llama.cpp) avec Docker et Runpod.</li>
+                        <li data-i18n="stages.ia.li1">Conception et implémentation d'un système robuste RAG avec pipeline d'ingestion de documents (extraction PDF, Excel, Word nettoyage, segmentation et vectorisation).</li>
+                        <li data-i18n="stages.ia.li2">Conception d'algorithmes de web scraping pour traiter les données de sites web, y compris ceux nécessitant une authentification.</li>
+                        <li data-i18n="stages.ia.li3">Développement d'un pipeline de requêtes permettant un questionnement contextuel et précis via un routage et une reformulation intelligents.</li>
+                        <li data-i18n="stages.ia.li4">Intégration de Qdrant avec SQL Server Express pour assurer un stockage synchronisé et un support complet des opérations CRUD.</li>
+                        <li data-i18n="stages.ia.li5">Création d'une interface frontend basée sur Nuxt.js permettant aux utilisateurs de téléverser, gérer leurs documents et interagir avec un assistant intelligent.</li>
+                        <li data-i18n="stages.ia.li6">Déploiement de LLMs via des backends d'inférence évolutifs (TGI, vLLM et llama.cpp) avec Docker et Runpod.</li>
                     </ul>
-                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage3', 'Stagiaire Développeur IA', 'Screenshot 2026-01-19 150551.png')">📄 Attestation</button>
+                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage3', 'Stagiaire Développeur IA', 'Screenshot 2026-01-19 150551.png')">📄 <span data-i18n="common.certificate">Attestation</span></button>
                 </article>
                 <article class="timeline-item">
-                    <h3>Stagiaire Développeur Logiciel (Été)</h3>
+                    <h3 data-i18n="stages.software.title">Stagiaire Développeur Logiciel (Été)</h3>
                     <p><strong>06/2024– 08/2024</strong></p>
                     <p><em>Nvotec, Paris, France (Télétravail)</em></p>
                     <ul style="margin-top: 1rem; margin-left: 1.5rem;">
-                        <li>Développement d'un plateform pour E-citoyen en utilisant Nuxt.js, pinia et Tailwind CSS, améliorant l'UI/UX et la réactivité.</li>
-                        <li>Correction de bogues et ajout de nouvelles fonctionnalités, augmentant la performance de la plateforme.</li>
+                        <li data-i18n="stages.software.li1">Développement d'un plateform pour E-citoyen en utilisant Nuxt.js, pinia et Tailwind CSS, améliorant l'UI/UX et la réactivité.</li>
+                        <li data-i18n="stages.software.li2">Correction de bogues et ajout de nouvelles fonctionnalités, augmentant la performance de la plateforme.</li>
                     </ul>
-                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage4', 'Stagiaire Développeur Logiciel', 'Screenshot 2026-01-19 150821.png')">📄 Attestation</button>
+                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage4', 'Stagiaire Développeur Logiciel', 'Screenshot 2026-01-19 150821.png')">📄 <span data-i18n="common.certificate">Attestation</span></button>
                 </article>
                 <article class="timeline-item">
-                    <h3>Stagiaire Gestionnaire Technique – Analyse de Données Locomotives</h3>
+                    <h3 data-i18n="stages.technician.title">Stagiaire Gestionnaire Technique – Analyse de Données Locomotives</h3>
                     <p><strong>06/2023</strong></p>
                     <p><em>Societe Nationale des Chemins de Fer Tunisiens (SNCFT)</em></p>
                     <ul style="margin-top: 1rem; margin-left: 1.5rem;">
-                        <li>Participation à la gestion technique des locomotives et au suivi de leur état de fonctionnement à l'aide des données issues du système de contrôle EMD EM2000™.</li>
-                        <li>Collecte, organisation et analyse des données opérationnelles (performances moteur, traction, consommation, événements et défauts) pour appuyer la prise de décision technique.</li>
-                        <li>Contribution à la surveillance des indicateurs de performance et à l'identification des anomalies récurrentes.</li>
-                        <li>Appui à la planification de la maintenance préventive grâce à l'exploitation des historiques de données et des rapports techniques.</li>
+                        <li data-i18n="stages.technician.li1">Participation à la gestion technique des locomotives et au suivi de leur état de fonctionnement à l'aide des données issues du système de contrôle EMD EM2000™.</li>
+                        <li data-i18n="stages.technician.li2">Collecte, organisation et analyse des données opérationnelles (performances moteur, traction, consommation, événements et défauts) pour appuyer la prise de décision technique.</li>
+                        <li data-i18n="stages.technician.li3">Contribution à la surveillance des indicateurs de performance et à l'identification des anomalies récurrentes.</li>
+                        <li data-i18n="stages.technician.li4">Appui à la planification de la maintenance préventive grâce à l'exploitation des historiques de données et des rapports techniques.</li>
                     </ul>
-                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage1', 'Stage de Développement Web', 'Screenshot 2026-01-19 150618.png')">📄 Attestation</button>
+                    <button style="margin-top: 5px;" class="certificate-link" onclick="openCertificateModal('stage1', 'Stage de Développement Web', 'Screenshot 2026-01-19 150618.png')">📄 <span data-i18n="common.certificate">Attestation</span></button>
                 </article>
             </div>
-            <h2>Hackathon </h2>
+            <h2 data-i18n="hackathon.title">Hackathon </h2>
             <div class="timeline">
                 <article class="timeline-item">
-                    <h3>Hackathon de 24h - chaussure Eco-responsable</h3>
+                    <h3 data-i18n="hackathon.shoes.title">Hackathon de 24h - chaussure Eco-responsable</h3>
                     <p><strong>2024</strong></p>
                     
-                    <p>Application e-commerce mobile développée avec Flutter, dédiée à la vente de chaussures. Elle permet aux utilisateurs de parcourir les produits, consulter les détails (prix, tailles, images), ajouter des articles au panier, passer commande et suivre leurs achats à travers une interface simple, rapide et intuitive.</p>
+                    <p data-i18n="hackathon.shoes.desc">Application e-commerce mobile développée avec Flutter, dédiée à la vente de chaussures. Elle permet aux utilisateurs de parcourir les produits, consulter les détails (prix, tailles, images), ajouter des articles au panier, passer commande et suivre leurs achats à travers une interface simple, rapide et intuitive.</p>
                     <div style="margin-top: 5px; display:flex; gap:0.5rem; align-items:center;">
                         <a href="https://github.com/Abdelwaheb-bhs/ShoesApp" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
                         </a>
-                        <button style="margin-top: 0;" class="certificate-link" onclick="openCertificateModal('Hackathon1', 'chaussure Eco-responsable', 'Screenshot 2026-01-19 150533.png')">📄 Attestation</button>
+                        <button style="margin-top: 0;" class="certificate-link" onclick="openCertificateModal('Hackathon1', 'chaussure Eco-responsable', 'Screenshot 2026-01-19 150533.png')">📄 <span data-i18n="common.certificate">Attestation</span></button>
                     </div>
                 </article>
                 <article class="timeline-item">
-                    <h3>MedHack 2</h3>
+                    <h3 data-i18n="hackathon.med.title">MedHack 2</h3>
                     <p><strong>2023</strong></p>
                     <p><em>Lung Cancer Prediction APP</em></p>
-                    <p>Une application qui vous permet d’effectuer une analyse précise des échantillons et de confirmer l’étendue
+                    <p data-i18n="hackathon.med.desc">Une application qui vous permet d'effectuer une analyse précise des échantillons et de confirmer l'étendue
 de leur infection par cette maladie, car cette application vous fournit une présentation illustrative de ces
 échantillons en téléchargeant leur fichier et en affichant des graphiques spécifiques pour chaque analyse. Basée
 sur Python Flet</p>
@@ -138,7 +143,7 @@ sur Python Flet</p>
                         <a href="https://github.com/Abdelwaheb-bhs/Lung-Cancer-Predact" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
                         </a>
-                        <button style="margin-top: 0;" class="certificate-link" onclick="openCertificateModal('Hackathon2', 'MedHack 2', 'Screenshot 2026-01-19 150511.png')">📄 Attestation</button>
+                        <button style="margin-top: 0;" class="certificate-link" onclick="openCertificateModal('Hackathon2', 'MedHack 2', 'Screenshot 2026-01-19 150511.png')">📄 <span data-i18n="common.certificate">Attestation</span></button>
                     </div>
                 </article>
             </div>
@@ -146,49 +151,79 @@ sur Python Flet</p>
 
         <!-- Section Compétences -->
         <section id="competences">
-            <h2>Compétences Informatiques</h2>
+            <h2 data-i18n="skills.title">Compétences Informatiques</h2>
             <div class="skills-grid">
                 <article class="skill-card">
-                    <h3>Langages de Programmation</h3>
-                    <p>JavaScript, Python, Java, C++, PHP, HTML/CSS</p>
+                    <h3 data-i18n="skills.lang.title">Langages de Programmation</h3>
+                    <p data-i18n="skills.lang.value">JavaScript, Python, Java, C++, PHP, HTML/CSS</p>
                 </article>
                 <article class="skill-card">
-                    <h3>Frameworks & Bibliothèques</h3>
-                    <p>React, Node.js, Express, Django, Bootstrap, Tailwind CSS</p>
+                    <h3 data-i18n="skills.frameworks.title">Frameworks & Bibliothèques</h3>
+                    <p data-i18n="skills.frameworks.value">React, Node.js, Express, Django, Bootstrap, Tailwind CSS</p>
                 </article>
                 <article class="skill-card">
-                    <h3>Bases de Données</h3>
-                    <p>MySQL, PostgreSQL, MongoDB, Oracle</p>
+                    <h3 data-i18n="skills.db.title">Bases de Données</h3>
+                    <p data-i18n="skills.db.value">MySQL, PostgreSQL, MongoDB, Oracle</p>
                 </article>
                 <article class="skill-card">
-                    <h3>Outils de Développement</h3>
-                    <p>Git, VS Code, IntelliJ IDEA, Docker, Postman</p>
+                    <h3 data-i18n="skills.tools.title">Outils de Développement</h3>
+                    <p data-i18n="skills.tools.value">Git, VS Code, IntelliJ IDEA, Docker, Postman</p>
                 </article>
                 <article class="skill-card">
-                    <h3>Méthodes Agiles</h3>
-                    <p>Scrum, Kanban, Sprints, Daily Stand-ups</p>
+                    <h3 data-i18n="skills.agile.title">Méthodes Agiles</h3>
+                    <p data-i18n="skills.agile.value">Scrum, Kanban, Sprints, Daily Stand-ups</p>
                 </article>
                 <article class="skill-card">
-                    <h3>Autres Compétences</h3>
-                    <p>UI/UX Design, API REST, DevOps, Cloud Computing</p>
+                    <h3 data-i18n="skills.other.title">Autres Compétences</h3>
+                    <p data-i18n="skills.other.value">UI/UX Design, API REST, DevOps, Cloud Computing</p>
                 </article>
             </div>
 
             <!-- Projects Container -->
             <div class="projects-section">
-                <h3>Mes Projets</h3>
+                <h3 data-i18n="projects.title">Mes Projets</h3>
                 <div class="projects-grid">
+                     <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/30c19d56-cf8c-4442-a685-312349476eaa.gif" alt="Nchatiw Chat Application">
+                        </div>
+                        <div class="project-content">
+                            <h4 data-i18n="projects.locomotive.title">Locomotive Management App</h4>
+                            <p data-i18n="projects.locomotive.desc">Développement d’une application full-stack de gestion de la maintenance des locomotives, permettant d’automatiser la planification des interventions et de centraliser la documentation technique pour les agents sur le terrain. Conception également d’un assistant conversationnel basé sur RAG et le pattern ReAct, capable de répondre aux questions sur les composants, l’historique des maintenances et les procédures techniques en s’appuyant sur plusieurs sources de données.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">📖 <span data-i18n="common.source">Source Code</span></a>
+                                 <a href="https://github.com/Abdelwaheb-bhs/Nchatiw-flutter-chat-app" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>
+                            </div>
+                        </div>
+                    </article>
+                     <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/logoHarvest.png" alt="Nchatiw Chat Application">
+                        </div>
+                        <div class="project-content">
+                            <h4 data-i18n="projects.harvestai.title">HarvestAI .NET Library</h4>
+                            <p data-i18n="projects.harvestai.desc">Développement d’une librairie .NET pour scraper et transformer du contenu web en chunks prêts pour les applications LLM et RAG. Gestion du contenu dynamique avec Playwright, conversion en Markdown et découpage intelligent avec Tiktoken. Disponible sur NuGet.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">📖 <span data-i18n="common.source">Source Code</span></a>
+                                 <a href="https://github.com/Abdelwaheb-bhs/Nchatiw-flutter-chat-app" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>
+                            </div>
+                        </div>
+                    </article>
                     <article class="project-card">
                         <div class="project-image">
                             <img src="images/Capture1.PNG" alt="Nchatiw Chat Application">
                         </div>
                         <div class="project-content">
-                            <h4>Nchatiw</h4>
-                            <p>Une application de chat simple, permettant la communication
+                            <h4 data-i18n="projects.nchatiw.title">Nchatiw</h4>
+                            <p data-i18n="projects.nchatiw.desc">Une application de chat simple, permettant la communication
 basée sur le texte entre les utilisateurs. Basée sur Flutter pour
 le frontend et Firebase pour le backend</p>
                             <div class="project-links">
-                                <a href="#" class="project-link">📖 Source Code</a>
+                                <a href="#" class="project-link">📖 <span data-i18n="common.source">Source Code</span></a>
                                  <a href="https://github.com/Abdelwaheb-bhs/Nchatiw-flutter-chat-app" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
                         </a>
@@ -201,10 +236,10 @@ le frontend et Firebase pour le backend</p>
                             <img src="images/Capture.PNG" alt="Sorting Hat Quiz Application">
                         </div>
                         <div class="project-content">
-                            <h4>Sorting Hat</h4>
-                            <p>Application de quiz interactif permettant aux utilisateurs de découvrir la maison de Poudlard qui leur correspond à travers une expérience ludique inspirée de l’univers Harry Potter.</p>
+<h4 data-i18n="projects.sorting.title">Sorting Hat</h4>
+                            <p data-i18n="projects.sorting.desc">Application de quiz interactif permettant aux utilisateurs de découvrir la maison de Poudlard qui leur correspond à travers une expérience ludique inspirée de l'univers Harry Potter.</p>
                             <div class="project-links">
-                                <a href="#" class="project-link">📖 Source Code</a>
+                                <a href="#" class="project-link">📖 <span data-i18n="common.source">Source Code</span></a>
                                  <a href="https://github.com/Abdelwaheb-bhs/Sorting-Hat-flutter-app" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
                         </a>
@@ -217,11 +252,11 @@ le frontend et Firebase pour le backend</p>
                             <img src="images/Capture d'écran 2024-12-30 221032.png" alt="Your Project">
                         </div>
                         <div class="project-content">
-                            <h4>App mobile pour cabinet médical</h4>
-                            <p> Développement d’une application de gestion pour cabinet médical permettant le suivi des patients, la gestion
+<h4 data-i18n="projects.medical.title">App mobile pour cabinet médical</h4>
+                            <p data-i18n="projects.medical.desc"> Développement d'une application de gestion pour cabinet médical permettant le suivi des patients, la gestion
 des rendez-vous (Flutter Laravel).</p>
                             <div class="project-links">
-                                <a href="#" class="project-link">📖 Source Code</a>
+                                <a href="#" class="project-link">📖 <span data-i18n="common.source">Source Code</span></a>
  <a href="https://github.com/Abdelwaheb-bhs/MediFollow" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
                         </a>                            </div>
@@ -232,10 +267,10 @@ des rendez-vous (Flutter Laravel).</p>
                             <img src="images/Gemini_Generated_Image_fgnb9lfgnb9lfgnb.png" alt="Your Project">
                         </div>
                         <div class="project-content">
-                            <h4>AI Agent powerd by RAG with Advanced Output</h4>
-                            <p> Application web basée sur la Retrieval-Augmented Generation (RAG) permettant d’interroger intelligemment des données structurées et non structurées, avec des résultats présentés sous forme de graphiques avancés et interactifs pour faciliter l’analyse et la prise de décision.</p>
+<h4 data-i18n="projects.rag.title">AI Agent powerd by RAG with Advanced Output</h4>
+                            <p data-i18n="projects.rag.desc"> Application web basée sur la Retrieval-Augmented Generation (RAG) permettant d'interroger intelligemment des données structurées et non structurées, avec des résultats présentés sous forme de graphiques avancés et interactifs pour faciliter l'analyse et la prise de décision.</p>
                             <div class="project-links">
-                                <a href="#" class="project-link">📖 Source Code</a>
+                                <a href="#" class="project-link">📖 <span data-i18n="common.source">Source Code</span></a>
  <a href="https://github.com/Abdelwaheb-bhs/SK-RAG" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
                         </a>                            </div>
@@ -246,10 +281,10 @@ des rendez-vous (Flutter Laravel).</p>
                             <img src="images/Gemini_Generated_Image_yqzezdyqzezdyqze.png" alt="Your Project">
                         </div>
                         <div class="project-content">
-                            <h4>Smart Entreprise</h4>
-                            <p> Application mobile utilisant l’IA et la reconnaissance faciale pour contrôler l’ouverture des portes via smartphone et assurer automatiquement la gestion des présences à l’aide d’un modèle IA connecté à des caméras et à un système de contrôle d’accès.</p>
+<h4 data-i18n="projects.smart.title">Smart Entreprise</h4>
+                            <p data-i18n="projects.smart.desc"> Application mobile utilisant l'IA et la reconnaissance faciale pour contrôler l'ouverture des portes via smartphone et assurer automatiquement la gestion des présences à l'aide d'un modèle IA connecté à des caméras et à un système de contrôle d'accès.</p>
                             <div class="project-links">
-                                <a href="#" class="project-link">📖 Source Code</a>
+                                <a href="#" class="project-link">📖 <span data-i18n="common.source">Source Code</span></a>
  <a href="https://github.com/Abdelwaheb-bhs/SmartRoom" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
                         </a>                            </div>
@@ -260,10 +295,10 @@ des rendez-vous (Flutter Laravel).</p>
                             <img src="images/lang.png" alt="Your Project">
                         </div>
                         <div class="project-content">
-                            <h4>Lung Cancer Prediction APP</h4>
-                            <p>Application basée sur Python Flet permettant l’analyse précise d’échantillons, avec visualisation des résultats et affichage de graphiques spécifiques à partir des fichiers téléchargés.</p>
+<h4 data-i18n="projects.lung.title">Lung Cancer Prediction APP</h4>
+                            <p data-i18n="projects.lung.desc">Application basée sur Python Flet permettant l'analyse précise d'échantillons, avec visualisation des résultats et affichage de graphiques spécifiques à partir des fichiers téléchargés.</p>
                             <div class="project-links">
-                                <a href="#" class="project-link">📖 Source Code</a>
+                                <a href="#" class="project-link">📖 <span data-i18n="common.source">Source Code</span></a>
  <a href="https://github.com/Abdelwaheb-bhs/Lung-Cancer-Predact" target="_blank" rel="noopener noreferrer" class="github-link" title="Voir le dépôt GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.7-3.88-1.38-3.88-1.38-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 012.87-.39c.97.01 1.95.13 2.87.39 2.18-1.5 3.14-1.18 3.14-1.18.62 1.58.24 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.77 1.08.77 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.66.79.55A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
                         </a>                            </div>
@@ -275,7 +310,7 @@ des rendez-vous (Flutter Laravel).</p>
 
         <!-- Section Expériences -->
         <section id="experiences">
-            <h2>Certifications</h2>
+            <h2 data-i18n="certifs.title">Certifications</h2>
 
             <!-- Certifications Container -->
             <div class="certifications-section">
@@ -288,7 +323,7 @@ des rendez-vous (Flutter Laravel).</p>
                         <div class="certification-info">
                             <h4>Generative AI with Diffusion Models</h4>
                             <p class="certification-issuer">NVIDIA</p>
-                            <a href="https://learn.nvidia.com/certificates?id=AXZTjvCrTcyGCbG0EuX4Gw#" class="certification-link">View Certificate</a>
+                            <a href="https://learn.nvidia.com/certificates?id=AXZTjvCrTcyGCbG0EuX4Gw#" class="certification-link"><span data-i18n="common.view_cert">View Certificate</span></a>
                         </div>
                     </article>
 
@@ -300,7 +335,7 @@ des rendez-vous (Flutter Laravel).</p>
                             <h4>
 Introduction to Transformer-Based Natural Language Processing</h4>
                             <p class="certification-issuer">NVIDIA</p>
-                            <a href="https://learn.nvidia.com/certificates?id=PluwakLsR1K0CWMDA6O-ew" class="certification-link">View Certificate</a>
+                            <a href="https://learn.nvidia.com/certificates?id=PluwakLsR1K0CWMDA6O-ew" class="certification-link"><span data-i18n="common.view_cert">View Certificate</span></a>
                         </div>
                     </article>
 
@@ -311,7 +346,7 @@ Introduction to Transformer-Based Natural Language Processing</h4>
                         <div class="certification-info">
                             <h4>Getting Started with Deep Learning</h4>
                             <p class="certification-issuer">NVIDIA</p>
-                            <a href="https://learn.nvidia.com/certificates?id=iAtc-GL7Ti-1jjzhamytaQ#/courses/course?course_id=course-v1:DLI+S-FX-01+V1" class="certification-link">View Certificate</a>
+                            <a href="https://learn.nvidia.com/certificates?id=iAtc-GL7Ti-1jjzhamytaQ#/courses/course?course_id=course-v1:DLI+S-FX-01+V1" class="certification-link"><span data-i18n="common.view_cert">View Certificate</span></a>
                         </div>
                     </article>
 
@@ -322,7 +357,7 @@ Introduction to Transformer-Based Natural Language Processing</h4>
                         <div class="certification-info">
                             <h4>Generative AI with Large Language Models</h4>
                             <p class="certification-issuer">Deeplearning.ai</p>
-                            <a href="https://www.coursera.org/account/accomplishments/verify/6ZISEIENCHPF" class="certification-link">View Certificate</a>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/6ZISEIENCHPF" class="certification-link"><span data-i18n="common.view_cert">View Certificate</span></a>
                         </div>
                     </article>
                 </div>
@@ -355,14 +390,14 @@ Introduction to Transformer-Based Natural Language Processing</h4>
 
         <!-- Section Passions -->
         <section id="passions">
-            <h2>Passions & Centres d'Intérêt</h2>
+            <h2 data-i18n="passions.title">Passions & Centres d'Intérêt</h2>
             <article style="margin-bottom: 2rem;">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Développement de Projets Personnels</h3>
-                <p>Passionné par la création d'applications web innovantes et l'apprentissage de nouvelles technologies. J'aime explorer les dernières tendances en développement et contribuer à des projets open source.</p>
+                <h3 data-i18n="passions.dev.title" style="color: var(--secondary); margin-bottom: 1rem;">Développement de Projets Personnels</h3>
+                <p data-i18n="passions.dev.desc">Passionné par la création d'applications web innovantes et l'apprentissage de nouvelles technologies. J'aime explorer les dernières tendances en développement et contribuer à des projets open source.</p>
             </article>
             <article style="margin-bottom: 2rem;">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Esprit Artistique</h3>
-                <p>Passionné par l'art et la créativité, je cultive un esprit artistique qui enrichit ma vision du design et de l'innovation. Mes dessins et créations visuelles reflètent ma sensibilité créative et ma capacité à transformer des idées abstraites en réalités visuelles.</p>
+                <h3 data-i18n="passions.art.title" style="color: var(--secondary); margin-bottom: 1rem;">Esprit Artistique</h3>
+                <p data-i18n="passions.art.desc">Passionné par l'art et la créativité, je cultive un esprit artistique qui enrichit ma vision du design et de l'innovation. Mes dessins et créations visuelles reflètent ma sensibilité créative et ma capacité à transformer des idées abstraites en réalités visuelles.</p>
                 <div class="drawings-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
                     <div class="drawing-card" onclick="openDrawingModal('images/Screenshot 2026-01-19 204219.png', 'Dessin 1')">
                         <div style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center;">
@@ -382,8 +417,8 @@ Introduction to Transformer-Based Natural Language Processing</h4>
                 </div>
             </article>
             <article style="margin-bottom: 2rem;">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Qualités Personnelles</h3>
-                <p>Travail d'équipe, persévérance, curiosité intellectuelle, gestion du temps, capacité d'adaptation, esprit analytique et créativité dans la résolution de problèmes.</p>
+                <h3 data-i18n="passions.qualities.title" style="color: var(--secondary); margin-bottom: 1rem;">Qualités Personnelles</h3>
+                <p data-i18n="passions.qualities.desc">Travail d'équipe, persévérance, curiosité intellectuelle, gestion du temps, capacité d'adaptation, esprit analytique et créativité dans la résolution de problèmes.</p>
             </article>
         </section>
 
@@ -391,25 +426,25 @@ Introduction to Transformer-Based Natural Language Processing</h4>
 
         <!-- Section Contact -->
         <section id="contact">
-            <h2>Contactez-moi</h2>
+            <h2 data-i18n="contact.title">Contactez-moi</h2>
             <form id="contactForm" onsubmit="handleContact(event)">
                 <div class="form-group">
-                    <label for="name">Nom complet *</label>
+                    <label for="name" data-i18n="contact.name">Nom complet *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email *</label>
+                    <label for="email" data-i18n="contact.email">Email *</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="subject">Sujet *</label>
+                    <label for="subject" data-i18n="contact.subject">Sujet *</label>
                     <input type="text" id="subject" name="subject" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message *</label>
+                    <label for="message" data-i18n="contact.message">Message *</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit">Envoyer le message</button>
+                <button type="submit" data-i18n="contact.send">Envoyer le message</button>
             </form>
         </section>
 
@@ -417,8 +452,8 @@ Introduction to Transformer-Based Natural Language Processing</h4>
     </main>
 
     <footer style="position: relative; z-index: 100;">
-        <p>&copy; 2026 Abdelwaheb Ben Haj Said. Tous droits réservés.</p>
-        <p>Conception et développement : Abdelwaheb Ben Haj Said</p>
+        <p>&copy; 2026 Abdelwaheb Ben Haj Said. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+        <p data-i18n="footer.design">Conception et développement : Abdelwaheb Ben Haj Said</p>
     </footer>
 
     <!-- Certificate Modal -->
@@ -447,164 +482,9 @@ Introduction to Transformer-Based Natural Language Processing</h4>
         </div>
     </div>
 
-    <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const particles = [];
-        const connections = [];
-        const particleCount = 80;
-        const maxDistance = 150;
-        const mouse = { x: null, y: null, radius: 150 };
-
-        // Theme-aware colors
-        function getThemeColors() {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            return {
-                bg: isDark ? 'rgba(15, 23, 42, 0.08)' : 'rgba(248, 250, 252, 0.05)',
-                particleLight: isDark ? 'rgba(59, 130, 246, ' : 'rgba(139, 92, 246, ',
-                particleShadow: isDark ? 'rgba(59, 130, 246, ' : 'rgba(139, 92, 246, ',
-                connection: isDark ? 'rgba(148, 163, 253, ' : 'rgba(196, 181, 253, '
-            };
-        }
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.z = Math.random() * 1000;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.vz = (Math.random() - 0.5) * 2;
-                this.size = 2;
-                this.baseSize = 2;
-            }
-
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                this.z += this.vz;
-
-                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-                if (this.z < 0 || this.z > 1000) this.vz *= -1;
-
-                if (mouse.x !== null && mouse.y !== null) {
-                    const dx = mouse.x - this.x;
-                    const dy = mouse.y - this.y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (dist < mouse.radius) {
-                        const force = (mouse.radius - dist) / mouse.radius;
-                        this.x -= dx * force * 0.05;
-                        this.y -= dy * force * 0.05;
-                        this.size = this.baseSize + force * 3;
-                    } else {
-                        this.size = this.baseSize;
-                    }
-                }
-
-                const scale = 500 / (500 + this.z);
-                this.size = this.baseSize * scale;
-            }
-
-            draw() {
-                const scale = 500 / (500 + this.z);
-                const x2d = (this.x - canvas.width / 2) * scale + canvas.width / 2;
-                const y2d = (this.y - canvas.height / 2) * scale + canvas.height / 2;
-                const opacity = 1 - this.z / 1000;
-                const colors = getThemeColors();
-
-                ctx.beginPath();
-                ctx.arc(x2d, y2d, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = colors.particleLight + (opacity * 0.8) + ')';
-                ctx.fill();
-
-                ctx.shadowBlur = 15;
-                ctx.shadowColor = colors.particleShadow + (opacity * 0.5) + ')';
-                ctx.fill();
-                ctx.shadowBlur = 0;
-            }
-        }
-
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
-
-        function drawConnections() {
-            const colors = getThemeColors();
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-
-                    if (dist < maxDistance) {
-                        const scale1 = 500 / (500 + particles[i].z);
-                        const scale2 = 500 / (500 + particles[j].z);
-                        
-                        const x1 = (particles[i].x - canvas.width / 2) * scale1 + canvas.width / 2;
-                        const y1 = (particles[i].y - canvas.height / 2) * scale1 + canvas.height / 2;
-                        const x2 = (particles[j].x - canvas.width / 2) * scale2 + canvas.width / 2;
-                        const y2 = (particles[j].y - canvas.height / 2) * scale2 + canvas.height / 2;
-
-                        const opacity = (1 - dist / maxDistance) * 0.3;
-
-                        ctx.beginPath();
-                        ctx.moveTo(x1, y1);
-                        ctx.lineTo(x2, y2);
-                        ctx.strokeStyle = colors.connection + opacity + ')';
-                        ctx.lineWidth = 1;
-                        ctx.stroke();
-                    }
-                }
-            }
-        }
-
-        function animate() {
-            const colors = getThemeColors();
-            ctx.fillStyle = colors.bg;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            drawConnections();
-
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        });
-
-        window.addEventListener('mouseleave', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
-
-        // Update particles when theme changes
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('theme-toggle')) {
-                setTimeout(() => {
-                    particles.forEach(p => p.size = p.baseSize);
-                }, 10);
-            }
-        });
-    </script>
-    <script src="js/script.js"></script>
+    <script src="js/neurons.js"></script>
+<script src="js/profile-neurons.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

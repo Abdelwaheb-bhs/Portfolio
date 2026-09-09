@@ -26,11 +26,21 @@ const correctAnswersText = {
 
 function showSection(sectionId) {
     const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.remove('active');
+    sections.forEach(section => section.classList.remove('active'));
+    const el = document.getElementById(sectionId);
+    if (!el) return false;
+    el.classList.add('active');
+
+    // highlight active nav link
+    document.querySelectorAll('nav a').forEach(a => {
+        const href = a.getAttribute('href') || '';
+        const onclick = a.getAttribute('onclick') || '';
+        const match = href.includes(`#${sectionId}`) || onclick.includes(`'${sectionId}'`);
+        a.classList.toggle('active-link', match);
     });
-    document.getElementById(sectionId).classList.add('active');
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    return false;
 }
 
 function checkQuiz() {
@@ -40,7 +50,7 @@ function checkQuiz() {
     for (let i = 1; i <= 10; i++) {
         const question = `q${i}`;
         const selected = document.querySelector(`input[name="${question}"]:checked`);
-        
+
         if (!selected) {
             answeredAll = false;
         } else if (selected.value === answers[question]) {
@@ -55,7 +65,7 @@ function checkQuiz() {
 
     const percentage = (score / 10) * 100;
     const resultDiv = document.getElementById('result');
-    
+
     let correctAnswersList = '<h3>Réponses correctes :</h3><ul style="margin-top: 1rem;">';
     for (let i = 1; i <= 10; i++) {
         correctAnswersList += `<li style="margin: 0.5rem 0;">Question ${i}: ${correctAnswersText[`q${i}`]}</li>`;
@@ -72,7 +82,7 @@ function checkQuiz() {
         </p>
         ${correctAnswersList}
     `;
-    
+
     resultDiv.className = `result show ${percentage >= 50 ? 'pass' : 'fail'}`;
     resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
@@ -81,10 +91,13 @@ function handleContact(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    const lang = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'fr';
 
-    alert(`Merci ${name} ! Votre message a été envoyé avec succès.\n\nNous vous répondrons à l'adresse : ${email}`);
+    if (lang === 'en') {
+        alert(`Thank you ${name}! Your message has been sent successfully.\n\nWe will reply to you at: ${email}`);
+    } else {
+        alert(`Merci ${name} ! Votre message a été envoyé avec succès.\n\nNous vous répondrons à l'adresse : ${email}`);
+    }
     document.getElementById('contactForm').reset();
 }
 
@@ -93,28 +106,45 @@ function toggleTheme() {
     const currentTheme = html.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     const themeToggle = document.querySelector('.theme-toggle');
-    
+
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     themeToggle.textContent = newTheme === 'light' ? '🌙' : '☀️';
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    // NVIDIA look is dark-first: default to dark unless user saved otherwise
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     const html = document.documentElement;
     html.setAttribute('data-theme', savedTheme);
     const themeToggle = document.querySelector('.theme-toggle');
     themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+
+    // mark the initially visible section in the nav
+    const active = document.querySelector('section.active');
+    if (active) showSection(active.id);
 });
+
+const modalTitleByStage = {
+    'stage3': { fr: 'Stagiaire Développeur IA', en: 'AI Developer Intern' },
+    'stage4': { fr: 'Stagiaire Développeur Logiciel', en: 'Software Developer Intern' },
+    'stage1': { fr: 'Stage de Développement Web', en: 'Web Development Internship' },
+    'Hackathon1': { fr: 'chaussure Eco-responsable', en: 'Eco-friendly shoe' },
+    'Hackathon2': { fr: 'MedHack 2', en: 'MedHack 2' }
+};
 
 function openCertificateModal(stageId, stageTitle, certificatePath) {
     const modal = document.getElementById('certificateModal');
     const title = document.getElementById('certificateTitle');
     const body = document.getElementById('certificateBody');
+    const lang = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'fr';
 
-    title.textContent = stageTitle + ' - Attestation';
-    
-  
+    const mapping = modalTitleByStage[stageId];
+    if (mapping && mapping[lang]) stageTitle = mapping[lang];
+
+    const attLabel = lang === 'en' ? 'Certificate' : 'Attestation';
+    title.textContent = stageTitle + ' - ' + attLabel;
+
     if (certificatePath.endsWith('.pdf')) {
         body.innerHTML = `
             <p style="margin-bottom: 1rem; color: var(--text-secondary);">
